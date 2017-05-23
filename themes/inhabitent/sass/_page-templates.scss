@@ -3,3 +3,140 @@
 --------------------------------------------------------------*/
 
 /* Front page */
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1120px;
+}
+
+.home {
+  h2 {
+    font-weight: 400;
+    font-size: 2.4rem;
+    margin-bottom: 3.75rem;
+    text-align: center;
+  }
+
+  .home-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0,0,0,0.4)0, rgba(0,0,0,0.4)), #969696 url(../../images/home-hero-compressed.jpg) no-repeat top;
+  background-size: cover, cover;
+  height: 100vh;
+  }
+
+  .logo {
+    background: url(../../images/inhabitent-logo-full.svg) no-repeat;
+    height: 275px;
+    width: 275px;
+  }
+}
+
+.site-branding p {
+  display: none;
+}
+
+.site-header {
+  position: fixed;
+  width: 100%;
+  padding: 0.5rem 0;
+
+  .container {
+    display: flex;
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+  }
+}
+
+/* Footer */
+.site-footer {
+  background: url(../../images/dark-wood@2x.png);
+  background-size: 512px 512px;
+  color: $color__background-body;
+
+  .site-info {
+    font-family: $font__headings,sans-serif;
+    padding: 1.5rem 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.footer-info {
+  display: flex;
+
+  .footer-info-item {
+    margin: 3rem 0;
+    padding-right: 1.5rem;
+    width: 25%;
+  }
+
+  h3 {
+    color: $color__brand-orange;
+    font-weight: bold;
+  }
+
+  p span {
+    font-weight: bold;
+  }
+
+  p a {
+    color: $color__background-body;
+  }
+
+  i {
+    font-size: 1.25rem;
+    margin-right: .5rem;
+  }
+
+  .footer-logo {
+    margin-top: 1rem;
+    text-align: right;
+
+    img {
+      max-width: 50%;
+    }
+  }
+}
+
+.footer-info-item:last-child {
+  width: 50%;
+  padding-right: 0;
+}
+
+
+/* About Page */
+
+.page-template-about .entry-header {
+    background: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url(../../images/about-hero.jpg) no-repeat center bottom;
+    background-size: cover, cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-template-about .entry-title {
+  font-size: 3rem;
+  text-align: center;
+  color: $color__background-body;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.page-template-about .entry-content {
+  margin: 3rem auto;
+  margin-bottom: 4.5rem;
+  max-width: 800px;
+}
+
+.page-template-about .entry-content h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.1rem;
+  color: #000;
+}

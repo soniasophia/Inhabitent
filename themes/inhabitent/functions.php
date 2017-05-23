@@ -104,3 +104,23 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/extras.php';
 
+
+/** 
+ * Excerpt length 
+ */
+function custom_excerpt_length( $length ) {
+    return 50;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+
+/**
+ * Read More Button
+ */
+ function excerpt_more( $more ) {
+    return sprintf( ' [...] <p><a class="read-more" href="%1$s">%2$s</a></p>',
+        get_permalink( get_the_ID() ),
+        __( 'Read More →', 'textdomain' )
+    );
+}
+add_filter( 'excerpt_more', 'excerpt_more' );

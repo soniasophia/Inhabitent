@@ -17,6 +17,9 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	font-family: $font__headings;
+	font-weight: normal;
+	text-transform: uppercase;
 }
 
 /* Copy */
@@ -26,7 +29,7 @@ p {
 }
 
 dfn, cite, em, i {
-	font-style: italic;
+	font-style: normal;
 }
 
 blockquote {

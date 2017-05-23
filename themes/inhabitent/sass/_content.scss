@@ -2,7 +2,7 @@
 # Content
 --------------------------------------------------------------*/
 
-/* Posts and pages */
+/* Posts and Pages */
 
 .sticky {
 	display: block;
@@ -31,6 +31,183 @@
 	clear: both;
 	margin: 0 0 $base__space-unit;
 }
+
+
+
+/* Blog Index and Single Blog Posts */
+
+.blog, .single-post {
+	.hentry {
+		margin: 0 0 4.5rem;
+	}
+
+  .entry-header {
+    position: relative;
+		line-height: 0;
+  }
+
+	.site-content {
+		width: 1120px;
+		margin: 0 auto;
+	}
+
+	.content-area {
+		border-right: 1px solid $color__border;
+    padding-right: 5%;
+		padding-top: 9%;
+    width: 73%;
+	}
+
+	img {
+		width: 1500px;
+		height: auto;
+		position: relative;
+	}
+
+	h2.entry-title a, h1.entry-title {
+		position: absolute;
+		line-height: 1.3;
+		top: 0px;
+		background: $color__brand-green;
+		padding: 0.75rem 1.5rem;
+		margin-top: 2.25rem;
+		font-weight: bold;
+		font-size: 2.1rem;
+		max-width: 75%;
+		color: $color__background-body;
+	}
+
+	h2.entry-title a:hover {
+		color: $color__link-hover;
+	}
+
+	.entry-meta {
+		text-transform: uppercase;
+		font-family: $font__headings;
+		background: $color__brand-green;
+		color: $color__background-body;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		padding: 1rem 1.5rem;
+	}
+
+	a.read-more {
+		color: #000;
+		border: 1px solid black;
+    padding: 0.5rem 1.5rem;
+    text-transform: uppercase;
+		font-family: $font__headings;
+	}
+
+	a.read-more:hover {
+		background: $color__brand-green;
+		color: $color__background-body;
+		border: none;
+	}
+}
+
+
+.single-post {
+	.cat-links, .tags-links {
+		margin-right: 1.5rem;
+		font-family: $font__headings;
+		text-transform: uppercase;
+	}
+
+	.entry-footer a, .reply a {
+		color: $color__brand-green;
+	}
+
+	.post-navigation {
+		display: none;
+	}
+
+	.comment {
+		padding-top: $base__space-unit;
+	}
+
+	.comments-link a {
+		color: white;
+
+		&:hover {
+			color: $color__link-hover;
+		}
+	}
+
+	.comments-title, .comment-reply-title {
+		font-weight: bold;
+		font-size: 2rem;
+	}
+	.comment-author-avatar {
+		width: 64px;
+		height: 64px;
+		border-radius: 50%;
+    margin-right: $base__space-unit;
+    overflow: hidden;
+	}
+
+	.comment-author {
+		font-weight: bold;
+	}
+
+	ol.comment-list {
+		padding-left: 0;
+		margin-left: 0;
+	}
+
+	.comment article {
+		padding-bottom: $base__space-unit;
+	}
+
+	.comment-body {
+		display: flex;
+	}
+
+	.comment-metadata {
+		color: $color__brand-grey;
+
+		a {
+			color: $color__brand-green;
+		}
+	}
+
+	.children li {
+    border-top: 1px solid $color__border;
+	}
+
+	.comment-list > li {
+    border-bottom: 1px solid #e1e1e1;
+	}
+
+	.comment-form label {
+		text-transform: uppercase;
+		font-family: $font__headings;
+		font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+	}
+	
+	input[type=submit] {
+		background: $color__brand-green;
+    color: #fff;
+    cursor: pointer;
+    font-family: $font__headings;
+    font-size: 0.9rem;
+    line-height: 1;
+    padding: .75rem 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+		border-color: none;
+		border-radius: 0;
+		box-shadow: none;
+		text-shadow: none;
+
+		&:hover {
+			background: #15544f;
+		}
+	}
+}
+
 
 /* Asides */
 
