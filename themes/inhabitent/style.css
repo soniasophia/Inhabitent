@@ -554,15 +554,15 @@ a:hover, a:active {
   display: none; }
 
 /* Posts and Pages Navigation */
-.blog .site-header, .single-post .site-header, .page-template-findus .site-header {
+.blog .site-header, .single-post .site-header, .page-template-findus .site-header, .single-product .site-header {
   background-color: rgba(255, 255, 255, 0.85);
   z-index: 5;
   border-bottom: 1px solid #e1e1e1; }
 
-.blog .main-navigation a, .single-post .main-navigation a, .page-template-findus .main-navigation a {
+.blog .main-navigation a, .single-post .main-navigation a, .page-template-findus .main-navigation a, .single-product .main-navigation a {
   color: #248A83; }
 
-.blog .site-logo, .single-post .site-logo, .page-template-findus .site-logo {
+.blog .site-logo, .single-post .site-logo, .page-template-findus .site-logo, .single-product .site-logo {
   background: url(../../images/inhabitent-logo-tent.svg) no-repeat;
   background-size: 100%;
   height: 33px;
@@ -994,6 +994,17 @@ object {
   font-weight: bold;
   font-size: 2.1rem;
   color: #000; }
+
+/* Product Page */
+.single-product h1 {
+  color: #d99054;
+  font-weight: bold; }
+
+.single-product .entry-meta, .single-product .widget-area, .single-product .post-navigation {
+  display: none; }
+
+.single-product .site-content {
+  padding-top: 6rem; }
 
 /*--------------------------------------------------------------
 # Footer

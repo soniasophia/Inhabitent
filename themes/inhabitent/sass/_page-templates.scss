@@ -140,3 +140,23 @@
   font-size: 2.1rem;
   color: #000;
 }
+
+/* Product Page */
+
+.single-product {
+
+  h1 {
+    color: #d99054;
+    font-weight: bold;
+  }
+
+  .entry-meta, .widget-area, .post-navigation {
+    display: none;
+  }
+
+  .site-content {
+    padding-top: 6rem;
+  }
+
+  
+}
