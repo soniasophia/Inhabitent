@@ -11,6 +11,9 @@ get_header(); ?>
         endwhile;
         ?>
 
+        <div class="about-info container"><h2>Our Story</h2><p><?php echo CFS()->get( 'our_story' ); ?></p></div>
+        <div class="about-info container"><h2>Our Team</h2><p><?php echo CFS()->get( 'our_team' ); ?></p></div>
+
     </main><!-- .site-main -->
 </div>
 
