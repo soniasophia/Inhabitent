@@ -970,7 +970,6 @@ object {
 
 /* About Page */
 .page-template-about .entry-header {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(../../images/about-hero.jpg) no-repeat center bottom;
   background-size: cover, cover;
   height: 100vh;
   display: -ms-flexbox;
