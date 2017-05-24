@@ -19,21 +19,24 @@ get_header(); ?>
           <h2>Inhabitent Journal</h2>
 
 <!--The Query Loop for Blog Posts-->
-            <?php
+
+            <ul><?php
            $posts = new WP_Query( 'posts_per_page=3&order=ASC' ); ?>
            <?php if ( $posts->have_posts() ) : ?>
                 <?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
-                <ul><?php the_post_thumbnail(); ?>
-                <?php the_time('F jS, Y'); ?> / <?php comments_popup_link('0 Comments »', '1 Comment »', '% Comments »'); ?></li>
+                <li><div class="thumbnail-container"><?php the_post_thumbnail(); ?>
+                <?php the_time('F jS, Y'); ?> / <?php comments_popup_link('0 Comments »', '1 Comment »', '% Comments »'); ?>
                 <h3><?php the_title(); ?></h3>
                 <a class="read-more" href="<?php the_permalink() ?>">Read Entry</a>
                 <?php endwhile; ?>
+                </li>
+
                 <?php the_posts_navigation(); ?>
                 <?php wp_reset_postdata(); ?>
             <?php else : ?>
                         <h2>Nothing found!</h2>
             <?php endif; ?>
-          </ul>
+            </ul>
         </div>
       </section>
       <section class="adventures container">
