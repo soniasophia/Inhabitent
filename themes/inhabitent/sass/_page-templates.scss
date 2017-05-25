@@ -354,3 +354,20 @@
     font-weight: bold;
   }
 }
+
+/* Product Archive Page */
+
+.post-type-archive {
+  .product-archive {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .product-grid-item {
+    flex: 0 1 23%;
+    max-width: 23%;
+    border: 1px solid $color__border;
+    margin-bottom: 1.5rem;
+  }
+}

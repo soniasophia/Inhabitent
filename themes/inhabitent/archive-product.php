@@ -22,33 +22,31 @@
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
+			<div class="product-archive">
+				<?php while ( have_posts() ) : the_post(); ?>
+					<div class="product-grid-item">
+							<div class="product-item-thumbnail">
+								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
+							</div>
+							<p class="product-item-text">
+								<?php the_title(); ?>
+								<span>......</span>
+								<?php echo CFS()->get( 'price' ); ?>
+							</p>
+						</div>
+			
+				<?php endwhile; ?>
 
-			<section class="product-grid container">
-			<?php while ( have_posts() ) : the_post(); ?>
-				<div class="product-grid-item">
-            <div class="product-item-thumbnail">
-              <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
-            </div>
-            <p class="product-item-text">
-              <?php the_title(); ?>
-              <span>......</span>
-              <?php echo CFS()->get( 'price' ); ?>
-            </p>
-          </div>
-      </section>
+				<?php the_posts_navigation(); ?>
 
-			<?php endwhile; ?>
+			<?php else : ?>
 
-			<?php the_posts_navigation(); ?>
+				<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-		<?php else : ?>
+			<?php endif; ?>
+			</div>
+				</div>
+			</main><!-- #main -->
+		</div><!-- #primary -->
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
-
-      </div>
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
- <?php get_footer(); ?>
+	<?php get_footer(); ?>
