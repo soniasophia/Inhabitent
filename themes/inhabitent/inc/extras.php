@@ -60,7 +60,7 @@ add_filter( 'login_headertitle', 'inhabitent_login_logo_url_title' );
 
 // Return 16 items on Product Archive Page and Order by Ascending Title Order
 function inhabitent_modify_archive_query( $query ) {
-    if ( is_post_type_archive ('product') || $query->is_tax('product-type') && !is_admin() && $query->is_main_query() ) {
+    if ( is_post_type_archive ( 'product' ) || $query->is_tax( 'product-type' ) && !is_admin() && $query->is_main_query() ) {
         $query->set( 'posts_per_page', '16' );
 				$query->set( 'orderby', 'title' );
         $query->set( 'order', 'ASC' );
@@ -68,9 +68,22 @@ function inhabitent_modify_archive_query( $query ) {
 }
 add_action( 'pre_get_posts', 'inhabitent_modify_archive_query' );
 
-//Filter the Archive Titles of Custom Product Pages
-// function inhabitent_archive_title() {
-// 		if ( )
+// Filter Archive Titles
+// function get_the_archive_title( $title ) {
+// 	if ( is_post_type_archive( 'product' ) || $title->is_tax( 'product-type' )) {
+//         $title = sprintf( __( 'Archives: %s' ), post_type_archive_title( '', false ) );
+// 	}
+// return apply_filters( 'get_the_archive_title', $title );
 // }
 
-//add_filter( )
+function archive_title_filter($title)
+{
+    if (is_post_type_archive()) {
+        $title = post_type_archive_title( '', false );
+    } elseif (is_tax()) {
+        $title = single_term_title( '', false );
+    }
+    return $title;
+}
+
+add_filter( 'get_the_archive_title', 'archive_title_filter' );

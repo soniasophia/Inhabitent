@@ -1002,6 +1002,9 @@ object {
         flex: 0 1 23.5%;
     max-width: 23.5%;
     padding: 0.75rem; }
+    .product-type-items .single-product-type img {
+      width: 70px;
+      height: 70px; }
     .product-type-items .single-product-type:hover {
       border-color: #d99054; }
   .product-type-items h3 {
@@ -1139,6 +1142,14 @@ object {
 
 .tax-product-type .taxonomy-description {
   text-align: center; }
+
+/* Sidebar */
+.widget-area .widget.widget_archive ul {
+  padding-left: 0;
+  margin-left: 0; }
+
+.widget-area .day-of-week {
+  font-weight: bold; }
 
 /*--------------------------------------------------------------
 # Footer
