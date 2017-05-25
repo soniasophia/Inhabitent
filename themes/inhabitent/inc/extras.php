@@ -31,7 +31,7 @@ add_action( 'admin_menu', 'inhabitent_remove_submenus', 110 );
 
 
 // Custom login logo
-function custom_login_logo() {
+function inhabitent_custom_login_logo() {
 	echo '<style type="text/css">
 		#login h1 a { 
 			background-image: url('. get_stylesheet_directory_uri() . '/images/inhabitent-logo-text-dark.svg) !important; 
@@ -42,29 +42,35 @@ function custom_login_logo() {
 		}
 		</style>';
 }
-add_action( 'login_head', 'custom_login_logo' );
+add_action( 'login_head', 'inhabitent_custom_login_logo' );
 
 
 // Custom login logo url
-function custom_login_logo_url( $url ) {
+function inhabitent_custom_login_logo_url( $url ) {
     return home_url();
 }
-add_filter( 'login_headerurl', 'custom_login_logo_url' );
+add_filter( 'login_headerurl', 'inhabitent_custom_login_logo_url' );
 
 
 // Custom login logo url title
-function login_logo_url_title() {
+function inhabitent_login_logo_url_title() {
     return 'Inhabitent Camping Supply Co.';
 }
-add_filter( 'login_headertitle', 'login_logo_url_title' );
+add_filter( 'login_headertitle', 'inhabitent_login_logo_url_title' );
 
 // Return 16 items on Product Archive Page and Order by Ascending Title Order
-
-function my_home_category( $query ) {
-    if ( is_post_type_archive ('product') && !is_admin() && $query->is_main_query() ) {
+function inhabitent_modify_archive_query( $query ) {
+    if ( is_post_type_archive ('product') || $query->is_tax('product-type') && !is_admin() && $query->is_main_query() ) {
         $query->set( 'posts_per_page', '16' );
 				$query->set( 'orderby', 'title' );
         $query->set( 'order', 'ASC' );
     }
 }
-add_action( 'pre_get_posts', 'my_home_category' );
+add_action( 'pre_get_posts', 'inhabitent_modify_archive_query' );
+
+//Filter the Archive Titles of Custom Product Pages
+// function inhabitent_archive_title() {
+// 		if ( )
+// }
+
+//add_filter( )
