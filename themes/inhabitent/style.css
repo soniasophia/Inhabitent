@@ -554,15 +554,15 @@ a:hover, a:active {
   display: none; }
 
 /* Posts and Pages Navigation */
-.blog .site-header, .single-post .site-header, .page-template-findus .site-header, .single-product .site-header {
+.blog .site-header, .single-post .site-header, .page-template-findus .site-header, .single-product .site-header, .tax-product-type .site-header {
   background-color: rgba(255, 255, 255, 0.85);
   z-index: 5;
   border-bottom: 1px solid #e1e1e1; }
 
-.blog .main-navigation a, .single-post .main-navigation a, .page-template-findus .main-navigation a, .single-product .main-navigation a {
+.blog .main-navigation a, .single-post .main-navigation a, .page-template-findus .main-navigation a, .single-product .main-navigation a, .tax-product-type .main-navigation a {
   color: #248A83; }
 
-.blog .site-logo, .single-post .site-logo, .page-template-findus .site-logo, .single-product .site-logo {
+.blog .site-logo, .single-post .site-logo, .page-template-findus .site-logo, .single-product .site-logo, .tax-product-type .site-logo {
   background: url(../../images/inhabitent-logo-tent.svg) no-repeat;
   background-size: 100%;
   height: 33px;
@@ -988,7 +988,7 @@ object {
   .latest-blog-posts .post-metadata a {
     color: black; }
 
-/* Product Type Items */
+/* Front Page Product Type Items */
 .product-type-items {
   display: -ms-flexbox;
   display: flex;
@@ -1136,6 +1136,9 @@ object {
 
 .single-product .social-buttons i {
   margin-right: 0.3rem; }
+
+.tax-product-type .taxonomy-description {
+  text-align: center; }
 
 /*--------------------------------------------------------------
 # Footer

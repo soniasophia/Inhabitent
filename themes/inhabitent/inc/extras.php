@@ -57,3 +57,14 @@ function login_logo_url_title() {
     return 'Inhabitent Camping Supply Co.';
 }
 add_filter( 'login_headertitle', 'login_logo_url_title' );
+
+// Return 16 items on Product Archive Page and Order by Ascending Title Order
+
+function my_home_category( $query ) {
+    if ( is_post_type_archive ('product') && !is_admin() && $query->is_main_query() ) {
+        $query->set( 'posts_per_page', '16' );
+				$query->set( 'orderby', 'title' );
+        $query->set( 'order', 'ASC' );
+    }
+}
+add_action( 'pre_get_posts', 'my_home_category' );

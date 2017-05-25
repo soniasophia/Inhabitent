@@ -11,6 +11,8 @@
 
  	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+      <div class="container">
+
 
 		<?php if ( have_posts() ) : ?>
 
@@ -20,6 +22,7 @@
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
+
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -38,6 +41,7 @@
 
 		<?php endif; ?>
 
+      </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

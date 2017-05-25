@@ -12,14 +12,13 @@ get_header(); ?>
       <section class="product-info container">
         <h2>Shop Stuff</h2>
 
-<!--Getting the Term Link to Display Product Types -->
+          <!--Getting the Taxonomy Terms to Display Product Types -->
           <?php $product_types = get_terms(array (
             'taxonomy'=>'product-type',
             'hide_empty'=> 0
           )); 
           if (!empty($product_types) && !is_wp_error($product_types)) : ?>
 
-          <!--put markup here -->
         <div class="product-type-items">
           <?php foreach ( $product_types as $product_type ) : ?>
           <div class="single-product-type">
@@ -37,7 +36,7 @@ get_header(); ?>
         <div class="container">
           <h2>Inhabitent Journal</h2>
 
-<!--The Query Loop for Blog Posts-->
+          <!--The Query Loop for Blog Posts-->
 
             <ul><?php
            $posts = new WP_Query( 'posts_per_page=3&order=DES' ); ?>

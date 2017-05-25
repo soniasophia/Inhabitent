@@ -127,7 +127,7 @@
 }
 
 
-/* Product Type Items */
+/* Front Page Product Type Items */
 
 .product-type-items {
   display: flex;
@@ -326,5 +326,12 @@
     .social-buttons i {
         margin-right: 0.3rem;
     }
+}
+
+
+.tax-product-type {
+  .taxonomy-description {
+    text-align: center;
+  }
 }
   
