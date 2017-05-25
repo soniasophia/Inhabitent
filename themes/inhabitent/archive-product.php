@@ -13,7 +13,7 @@
 		<main id="main" class="site-main" role="main">
       <div class="container">
 
-
+		
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
@@ -23,13 +23,19 @@
 				?>
 			</header><!-- .page-header -->
 
-
-			<?php /* Start the Loop */ ?>
+			<section class="product-grid container">
 			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
+				<div class="product-grid-item">
+            <div class="product-item-thumbnail">
+              <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
+            </div>
+            <p class="product-item-text">
+              <?php the_title(); ?>
+              <span>......</span>
+              <?php echo CFS()->get( 'price' ); ?>
+            </p>
+          </div>
+      </section>
 
 			<?php endwhile; ?>
 

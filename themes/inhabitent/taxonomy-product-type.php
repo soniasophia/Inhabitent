@@ -6,6 +6,9 @@ get_header(); ?>
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
       <div class="container">
+
+	    	<?php if ( have_posts() ) : ?>
+
         <header class="page-header">
 
           <?php
@@ -14,49 +17,31 @@ get_header(); ?>
 				?>
 			  </header><!-- .page-header -->
 
-<?php
+<section class="product-grid container">
+			<?php while ( have_posts() ) : the_post(); ?>
+				<div class="product-grid-item">
+            <div class="product-item-thumbnail">
+              <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
+            </div>
+            <p class="product-item-text">
+              <?php the_title(); ?>
+              <span>......</span>
+              <?php echo CFS()->get( 'price' ); ?>
+            </p>
+          </div>
+      </section>
 
-$args = array(
-    'type'                     => 'post',
-    'child_of'                 => 0,
-    'parent'                   => '',
-    'orderby'                  => 'name',
-    'order'                    => 'ASC',
-    'hide_empty'               => 1,
-    'hierarchical'             => 1,
-    'exclude'                  => '',
-    'include'                  => '',
-    'number'                   => '',
-    'taxonomy'                 => 'product-type',
-    'pad_counts'               => false 
+			<?php endwhile; ?>
 
-    ); 
-$categories = get_categories( $args );
-foreach ( $categories as $cat ) {
+			<?php the_posts_navigation(); ?>
 
+		<?php else : ?>
 
-$posts_array = get_posts(
-    array(
-        'posts_per_page' => -1,
-        'post_type' => 'product-type',
-        'tax_query' => array(
-            array(
-                'taxonomy' => 'product-type',
-                'field' => 'name',
-                'terms' => $cat->do,
-            )
-        )
-    )
-);
- print_r( $posts_array ); 
-}
+			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+		<?php endif; ?>
 
 
-
-
-
-
-?>
 
 
       </div>

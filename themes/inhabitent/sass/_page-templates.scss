@@ -337,9 +337,15 @@
   
 /* Sidebar */
 
-#archives-2 {
-  ul {
-    padding-left: 0;
-    margin-left: 0;
+.widget-area {
+  .widget.widget_archive {
+    ul {
+      padding-left: 0;
+      margin-left: 0;
+    }
+}
+
+  .day-of-week {
+    font-weight: bold;
   }
 }
