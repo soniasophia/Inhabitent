@@ -23,12 +23,12 @@
 			<header id="masthead" class="site-header" role="banner">
 				<div class="container">
 					<div class="site-branding">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<div class="site-logo">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 								<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 								<p class="site-description"><?php bloginfo( 'description' ); ?></p>
-							</a>
 						</div>
+						</a>
 					</div><!-- .site-branding -->
 
 				
