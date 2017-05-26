@@ -680,7 +680,9 @@ h2.widget-title ul {
 
 .blog .site-content, .single-post .site-content {
   width: 1120px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex; }
 
 .blog .content-area, .single-post .content-area {
   border-right: 1px solid #e1e1e1;
@@ -1143,40 +1145,48 @@ object {
 .tax-product-type .taxonomy-description {
   text-align: center; }
 
-/* Sidebar */
-.widget-area .widget.widget_archive ul {
-  padding-left: 0;
-  margin-left: 0; }
-
-.widget-area .day-of-week {
-  font-weight: bold; }
+/* Sidebar and Widget Area */
+.widget-area {
+  margin-top: 6rem;
+  padding-left: 4rem; }
+  .widget-area .widget.widget_archive ul {
+    padding-left: 0;
+    margin-left: 0; }
+  .widget-area .day-of-week {
+    font-weight: bold; }
+  .widget-area .widget.widget_archive a {
+    color: #248A83; }
+    .widget-area .widget.widget_archive a:hover {
+      color: black; }
+  .widget-area h2.widget-title {
+    font-weight: bold; }
 
 /* Product Archive Page */
-.post-type-archive .site-content {
+.post-type-archive .site-content, .tax-product-type .site-content {
   padding-top: 4rem; }
 
-.post-type-archive .page-header {
+.post-type-archive .page-header, .tax-product-type .page-header {
   border-bottom: 1px dashed #e1e1e1; }
-  .post-type-archive .page-header h1 {
+  .post-type-archive .page-header h1, .tax-product-type .page-header h1 {
     text-align: center;
     font-weight: bold;
     font-size: 2.5rem;
     margin-top: 2rem;
     margin-bottom: 0; }
 
-.post-type-archive .product-type-categories {
+.post-type-archive .product-type-categories, .tax-product-type .product-type-categories {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
   margin-bottom: 2rem; }
-  .post-type-archive .product-type-categories a {
+  .post-type-archive .product-type-categories a, .tax-product-type .product-type-categories a {
     margin: 0 2rem;
     color: #248A83; }
-    .post-type-archive .product-type-categories a:hover {
+    .post-type-archive .product-type-categories a:hover, .tax-product-type .product-type-categories a:hover {
       color: black; }
 
-.post-type-archive .product-archive {
+.post-type-archive .product-archive, .post-type-archive .product-grid, .tax-product-type .product-archive, .tax-product-type .product-grid {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -1186,19 +1196,19 @@ object {
   margin-top: 3rem;
   margin-bottom: 5rem; }
 
-.post-type-archive .product-grid-item {
+.post-type-archive .product-grid-item, .tax-product-type .product-grid-item {
   -ms-flex: 0 1 23%;
       flex: 0 1 23%;
   max-width: 23%;
   border: 1px solid #e1e1e1;
   margin-bottom: 1.5rem; }
 
-.post-type-archive .product-item-thumbnail {
+.post-type-archive .product-item-thumbnail, .tax-product-type .product-item-thumbnail {
   background-color: lightgrey;
   height: 250px;
   overflow: hidden;
   position: relative; }
-  .post-type-archive .product-item-thumbnail img {
+  .post-type-archive .product-item-thumbnail img, .tax-product-type .product-item-thumbnail img {
     max-height: 250px;
     max-width: none;
     position: absolute;
@@ -1207,9 +1217,58 @@ object {
     transform: translate(-50%, -52%);
     width: auto; }
 
-.post-type-archive .product-item-text {
+.post-type-archive .product-item-text, .tax-product-type .product-item-text {
   margin: .75rem 1rem;
   text-align: center; }
+
+/* Find Us Page */
+.page-template-findus .content-area {
+  border-right: 1px solid #e1e1e1;
+  padding-right: 5%;
+  padding-top: 5rem;
+  width: 73%; }
+
+.page-template-findus .entry-content {
+  width: 68%; }
+
+.page-template-findus .site-content {
+  width: 1120px;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex; }
+
+.page-template-findus h1, .page-template-findus h2 {
+  font-weight: bold;
+  color: black;
+  font-size: 2.1rem; }
+
+.page-template-findus label {
+  font-family: "novecento", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem; }
+  .page-template-findus label span {
+    color: #d99054; }
+
+.page-template-findus input[type=submit] {
+  background: #248A83;
+  color: #fff;
+  cursor: pointer;
+  font-family: "novecento", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1;
+  padding: .75rem 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-color: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: none; }
+  .page-template-findus input[type=submit]:hover {
+    background: #15544f; }
+
+.page-template-findus .wpcf7-form-control {
+  background-color: #e1e1e1; }
 
 /*--------------------------------------------------------------
 # Footer

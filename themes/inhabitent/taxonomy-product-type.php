@@ -21,7 +21,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<div class="product-grid-item">
             <div class="product-item-thumbnail">
-              <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
+              <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
             </div>
             <p class="product-item-text">
               <?php the_title(); ?>
@@ -29,8 +29,7 @@ get_header(); ?>
               <?php echo CFS()->get( 'price' ); ?>
             </p>
           </div>
-      </section>
-
+      
 			<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>
@@ -40,10 +39,7 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; ?>
-
-
-
-
+</section>
       </div>
     </main>
   </div>

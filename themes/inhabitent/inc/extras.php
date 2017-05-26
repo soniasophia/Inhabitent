@@ -76,14 +76,13 @@ add_action( 'pre_get_posts', 'inhabitent_modify_archive_query' );
 // return apply_filters( 'get_the_archive_title', $title );
 // }
 
-function archive_title_filter($title)
+function inhabitent_archive_title_filter($title)
 {
-    if (is_post_type_archive()) {
-        $title = post_type_archive_title( '', false );
-    } elseif (is_tax()) {
+    if (is_post_type_archive('product')) {
+        $title = 'Shop Stuff';
+    } elseif (is_tax('product-type')) {
         $title = single_term_title( '', false );
     }
     return $title;
 }
-
-add_filter( 'get_the_archive_title', 'archive_title_filter' );
+add_filter( 'get_the_archive_title', 'inhabitent_archive_title_filter' );

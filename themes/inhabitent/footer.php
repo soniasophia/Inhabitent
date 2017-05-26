@@ -41,7 +41,7 @@
 				</div>
 				<div class="site-info">
 					<div class="container">
-					<p>Copyright &copy; 2016 Inhabitent</p>
+					<p>Copyright &copy; 2017 Inhabitent</p>
 					</div>
 			  </div><!-- .site-info -->
 			</footer><!-- #colophon -->
