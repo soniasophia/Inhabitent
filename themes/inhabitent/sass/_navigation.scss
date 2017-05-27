@@ -178,13 +178,16 @@ a {
 
 /* Search Form */
 
-fieldset .search-field {
-	width: 0;
-	transition: width .5s;
-	background: transparent;
-	border: solid 0px transparent;
-}
+// fieldset .search-field {
+// 	width: 0;
+// 	transition: width .5s;
+// 	background: transparent;
+// 	border: solid 0px transparent;
+// }
 
-fieldset .search-field-expand {
-	width: 180px;
+// fieldset .search-field-expand {
+// 	width: 180px;
+
+.search-field {
+	display: none;
 }

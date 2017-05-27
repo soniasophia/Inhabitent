@@ -1,13 +1,13 @@
 (function ($) {
     $('.search-submit').on('click', function(event) {
       event.preventDefault();
-
-      $('.search-field').toggleClass('search-field-expand');
-      $('.search-field').focus();
+      event.stopPropagation();
+      $('.search-field').toggle('fast');
     });
-
-    $(window).on('click', function(event) {
-      event.preventDefault();
-      $('.search-field').removeClass('search-field-expand');
+    
+    $(document).on('click', function(e) {
+    if( !$('.search-field').is(e.target) ){
+      $('.search-field').hide();
+    }
     });
 })(jQuery); 
