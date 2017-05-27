@@ -431,7 +431,7 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
-/* Blog Posts Comment Area */
+/* Blog Posts Comments Area */
 .single-post .comment {
   padding-top: 1.5rem; }
 
@@ -619,6 +619,8 @@ a:hover, a:active {
 
 .blog .main-navigation a, .single-post .main-navigation a, .page-template-findus .main-navigation a, .single-product .main-navigation a, .post-type-archive .main-navigation a, .tax-product-type .main-navigation a {
   color: #248A83; }
+  .blog .main-navigation a:hover, .single-post .main-navigation a:hover, .page-template-findus .main-navigation a:hover, .single-product .main-navigation a:hover, .post-type-archive .main-navigation a:hover, .tax-product-type .main-navigation a:hover {
+    color: #404040; }
 
 .blog .site-logo, .single-post .site-logo, .page-template-findus .site-logo, .single-product .site-logo, .post-type-archive .site-logo, .tax-product-type .site-logo {
   background: url(../../images/inhabitent-logo-tent.svg) no-repeat;
@@ -638,7 +640,7 @@ input.search-field {
   outline: none;
   color: white; }
   input.search-field:focus {
-    color: white; }
+    color: #404040; }
 
 button.search-submit {
   border: 0;
@@ -647,22 +649,38 @@ button.search-submit {
   float: left; }
 
 input::-webkit-input-placeholder {
-  color: #f0e4d1; }
+  color: #404040; }
 
 input:-ms-input-placeholder {
-  color: #f0e4d1; }
+  color: #404040; }
 
 input::placeholder {
-  color: #f0e4d1; }
+  color: #404040; }
 
 fieldset {
   border: none; }
 
 .fa.fa-search {
-  color: white;
+  color: #248A83;
   padding-left: 0.9rem; }
   .fa.fa-search:hover {
-    border: none;
+    border: none; }
+
+.page-template-default input.search-field:focus, .page-template-about input.search-field:focus {
+  color: white; }
+
+.page-template-default input::-webkit-input-placeholder, .page-template-about input::-webkit-input-placeholder {
+  color: white; }
+
+.page-template-default input:-ms-input-placeholder, .page-template-about input:-ms-input-placeholder {
+  color: white; }
+
+.page-template-default input::placeholder, .page-template-about input::placeholder {
+  color: white; }
+
+.page-template-default .fa.fa-search, .page-template-about .fa.fa-search {
+  color: white; }
+  .page-template-default .fa.fa-search:hover, .page-template-about .fa.fa-search:hover {
     color: #f0e4d1; }
 
 /*--------------------------------------------------------------
@@ -756,6 +774,14 @@ h2.widget-title ul {
       color: black; }
   .widget-area h2.widget-title {
     font-weight: bold; }
+  .widget-area .contact-meta {
+    display: -ms-flexbox;
+    display: flex; }
+    .widget-area .contact-meta a {
+      color: #248A83; }
+  .widget-area .fa {
+    margin-right: 0.5rem;
+    line-height: 1.8rem; }
 
 /*--------------------------------------------------------------
 # Content

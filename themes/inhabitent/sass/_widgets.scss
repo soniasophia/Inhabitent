@@ -52,4 +52,17 @@ h2.widget-title ul {
   h2.widget-title {
     font-weight: bold;
   }
+
+	.contact-meta {
+		display:flex;
+
+			a {
+			color: $color__brand-green;
+		}
+	}
+
+	.fa {
+		margin-right: 0.5rem;
+		line-height: 1.8rem;
+	}
 }

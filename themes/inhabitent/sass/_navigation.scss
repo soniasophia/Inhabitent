@@ -173,6 +173,10 @@ a {
 
 	.main-navigation a {
 		color: $color__brand-green;
+
+		&:hover {
+			color: #404040;
+		}
 	}
 
 	.site-logo {
@@ -197,7 +201,7 @@ input.search-field {
 	color: white;
 
 	&:focus {
-		color: white;
+		color: #404040;
 	}
 }
 
@@ -209,7 +213,7 @@ button.search-submit {
 }
 
 input::placeholder {
-	color: $color__link-hover;
+	color: #404040;
 }
 
 fieldset {
@@ -218,11 +222,29 @@ fieldset {
 
 
 .fa.fa-search {
-	color: white;
+	color: $color__brand-green;
 	padding-left: 0.9rem;
 
 	&:hover {
 		border: none;
-		color: $color__link-hover
+	}
+}
+
+.page-template-default, .page-template-about {
+	input.search-field {
+		&:focus {
+			color: white;
+		}
+	}
+		input::placeholder {
+			color: white;
+		}
+
+	.fa.fa-search {
+		color: white;
+		
+		&:hover {
+			color: $color__link-hover;
+		}
 	}
 }
