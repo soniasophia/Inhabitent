@@ -527,7 +527,9 @@ a:hover, a:active {
   font-weight: 500;
   text-transform: uppercase;
   -ms-flex-pack: end;
-      justify-content: flex-end; }
+      justify-content: flex-end;
+  -ms-flex-align: center;
+      align-items: center; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -603,6 +605,9 @@ a:hover, a:active {
   position: fixed;
   width: 100%; }
 
+.page-template-default .site-header, .page-template-about .site-header {
+  position: absolute; }
+
 .site-title {
   display: none; }
 
@@ -622,8 +627,43 @@ a:hover, a:active {
   width: 50px; }
 
 /* Search Form */
-.search-field {
-  display: none; }
+input.search-field {
+  display: none;
+  border: 0;
+  margin-left: .75rem;
+  padding: 0 .3rem;
+  text-transform: uppercase;
+  font-family: "novecento", sans-serif;
+  background: transparent;
+  outline: none;
+  color: white; }
+  input.search-field:focus {
+    color: white; }
+
+button.search-submit {
+  border: 0;
+  padding: 0;
+  outline: none;
+  float: left; }
+
+input::-webkit-input-placeholder {
+  color: #f0e4d1; }
+
+input:-ms-input-placeholder {
+  color: #f0e4d1; }
+
+input::placeholder {
+  color: #f0e4d1; }
+
+fieldset {
+  border: none; }
+
+.fa.fa-search {
+  color: white;
+  padding-left: 0.9rem; }
+  .fa.fa-search:hover {
+    border: none;
+    color: #f0e4d1; }
 
 /*--------------------------------------------------------------
 # Accessibility

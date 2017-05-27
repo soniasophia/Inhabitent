@@ -1,13 +1,13 @@
 (function ($) {
-    $('.search-submit').on('click', function(event) {
+    $('.icon-search').on('click', function(event) {
       event.preventDefault();
       event.stopPropagation();
-      $('.search-field').toggle('fast');
+      $('.search-field').toggle('slow');
     });
     
-    $(document).on('click', function(e) {
-    if( !$('.search-field').is(e.target) ){
-      $('.search-field').hide();
+    $(document).on('click', function(event) {
+    if(! $('.search-field').is(event.target) ) {
+      $('.search-field').hide('slow');
     }
     });
 })(jQuery); 
