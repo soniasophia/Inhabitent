@@ -22,7 +22,7 @@ get_header(); ?>
         <div class="product-type-items">
           <?php foreach ( $product_types as $product_type ) : ?>
           <div class="single-product-type">
-            <img src="<?php echo get_template_directory_uri() ?>/images/product-type-icons/<?php echo $product_type->slug ?>.svg " alt="<p><?php echo $term->description; ?></p>">
+            <img src="<?php echo get_template_directory_uri() ?>/images/product-type-icons/<?php echo $product_type->slug ?>.svg " alt="<p><?php echo $term->name; ?></p>">
             
           <p><?php echo $product_type->description; ?></p>
           <a href="<?php echo get_term_link($product_type); ?>">

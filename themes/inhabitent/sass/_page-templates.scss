@@ -303,6 +303,21 @@
     margin-left: 2.5rem;
   }
 
+    .social-buttons i {
+        margin-right: 0.3rem;
+    }
+}
+
+.tax-product-type {
+  .taxonomy-description {
+    text-align: center;
+  }
+}
+
+
+/* Social Media Buttons on Single Blog Posts and Single Product Pages */
+
+.single-product, .single-post {
   .sm-button {
       border: 1px solid black;
       color: black;
@@ -324,49 +339,7 @@
         border: none;
       }
     }
-
-    .social-buttons i {
-        margin-right: 0.3rem;
-    }
 }
-
-
-.tax-product-type {
-  .taxonomy-description {
-    text-align: center;
-  }
-}
-  
-/* Sidebar and Widget Area */
-
-.widget-area {
-    margin-top: 6rem;
-    padding-left: 4rem;
-
-  .widget.widget_archive {
-    ul {
-      padding-left: 0;
-      margin-left: 0;
-    }
-}
-
-  .day-of-week {
-    font-weight: bold;
-  }
-
-  .widget.widget_archive a {
-    color: $color__brand-green;
-
-    &:hover {
-      color: black;
-    }
-  }
-
-  h2.widget-title {
-    font-weight: bold;
-  }
-}
-
 
 /* Product Archive Page */
 

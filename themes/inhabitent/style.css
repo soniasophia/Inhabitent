@@ -449,6 +449,77 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
+/* Blog Posts Comment Area */
+.single-post .comment {
+  padding-top: 1.5rem; }
+
+.single-post .comments-link a {
+  color: white; }
+  .single-post .comments-link a:hover {
+    color: #f0e4d1; }
+
+.single-post .comments-title, .single-post .comment-reply-title {
+  font-weight: bold;
+  font-size: 2rem; }
+
+.single-post .comment-author-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+  overflow: hidden; }
+
+.single-post .comment-author {
+  font-weight: bold; }
+
+.single-post ol.comment-list {
+  padding-left: 0;
+  margin-left: 0; }
+
+.single-post .comment article {
+  padding-bottom: 1.5rem; }
+
+.single-post .comment-body {
+  display: -ms-flexbox;
+  display: flex; }
+
+.single-post .comment-metadata {
+  color: #a1a1a1; }
+  .single-post .comment-metadata a {
+    color: #248A83; }
+
+.single-post .children li {
+  border-top: 1px solid #e1e1e1; }
+
+.single-post .comment-list > li {
+  border-bottom: 1px solid #e1e1e1; }
+
+.single-post .comment-form {
+  display: -ms-flexbox;
+  display: flex; }
+  .single-post .comment-form label {
+    text-transform: uppercase;
+    font-family: "novecento", sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem; }
+
+.single-post input[type=submit] {
+  background: #248A83;
+  color: #fff;
+  cursor: pointer;
+  font-family: "novecento", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1;
+  padding: .75rem 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-color: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: none; }
+  .single-post input[type=submit]:hover {
+    background: #15544f; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -568,6 +639,13 @@ a:hover, a:active {
   height: 33px;
   width: 50px; }
 
+/* Search Form */
+fieldset .search-field {
+  width: 0; }
+
+fieldset .search-field-expand {
+  width: 180px; }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -644,6 +722,22 @@ h2.widget-title ul {
   padding-left: 0;
   margin-left: 0; }
 
+/* Sidebar and Widget Area */
+.widget-area {
+  margin-top: 6rem;
+  padding-left: 4rem; }
+  .widget-area .widget.widget_archive ul {
+    padding-left: 0;
+    margin-left: 0; }
+  .widget-area .day-of-week {
+    font-weight: bold; }
+  .widget-area .widget.widget_archive a {
+    color: #248A83; }
+    .widget-area .widget.widget_archive a:hover {
+      color: black; }
+  .widget-area h2.widget-title {
+    font-weight: bold; }
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -672,7 +766,8 @@ h2.widget-title ul {
 
 /* Journal Blog Index and Single Journal Blog Posts */
 .blog .hentry, .single-post .hentry {
-  margin: 0 0 4.5rem; }
+  margin: 0 0 4.5rem;
+  margin-bottom: 2rem; }
 
 .blog .entry-header, .single-post .entry-header {
   position: relative;
@@ -732,6 +827,9 @@ h2.widget-title ul {
   color: #fff;
   border: none; }
 
+.blog .social-buttons, .single-post .social-buttons {
+  margin-bottom: 5rem; }
+
 .single-post .cat-links, .single-post .tags-links {
   margin-right: 1.5rem;
   font-family: "novecento", sans-serif;
@@ -742,73 +840,6 @@ h2.widget-title ul {
 
 .single-post .post-navigation {
   display: none; }
-
-.single-post .comment {
-  padding-top: 1.5rem; }
-
-.single-post .comments-link a {
-  color: white; }
-  .single-post .comments-link a:hover {
-    color: #f0e4d1; }
-
-.single-post .comments-title, .single-post .comment-reply-title {
-  font-weight: bold;
-  font-size: 2rem; }
-
-.single-post .comment-author-avatar {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  margin-right: 1.5rem;
-  overflow: hidden; }
-
-.single-post .comment-author {
-  font-weight: bold; }
-
-.single-post ol.comment-list {
-  padding-left: 0;
-  margin-left: 0; }
-
-.single-post .comment article {
-  padding-bottom: 1.5rem; }
-
-.single-post .comment-body {
-  display: -ms-flexbox;
-  display: flex; }
-
-.single-post .comment-metadata {
-  color: #a1a1a1; }
-  .single-post .comment-metadata a {
-    color: #248A83; }
-
-.single-post .children li {
-  border-top: 1px solid #e1e1e1; }
-
-.single-post .comment-list > li {
-  border-bottom: 1px solid #e1e1e1; }
-
-.single-post .comment-form label {
-  text-transform: uppercase;
-  font-family: "novecento", sans-serif;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem; }
-
-.single-post input[type=submit] {
-  background: #248A83;
-  color: #fff;
-  cursor: pointer;
-  font-family: "novecento", sans-serif;
-  font-size: 0.9rem;
-  line-height: 1;
-  padding: .75rem 1.5rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-color: none;
-  border-radius: 0;
-  box-shadow: none;
-  text-shadow: none; }
-  .single-post input[type=submit]:hover {
-    background: #15544f; }
 
 /* Asides */
 .blog .format-aside .entry-title,
@@ -1120,7 +1151,14 @@ object {
 .single-product .product-content-container {
   margin-left: 2.5rem; }
 
-.single-product .sm-button {
+.single-product .social-buttons i {
+  margin-right: 0.3rem; }
+
+.tax-product-type .taxonomy-description {
+  text-align: center; }
+
+/* Social Media Buttons on Single Blog Posts and Single Product Pages */
+.single-product .sm-button, .single-post .sm-button {
   border: 1px solid black;
   color: black;
   border-radius: 0;
@@ -1134,32 +1172,10 @@ object {
   font-size: 0.9rem;
   box-shadow: none;
   text-shadow: none; }
-  .single-product .sm-button:hover {
+  .single-product .sm-button:hover, .single-post .sm-button:hover {
     background: #248A83;
     color: white;
     border: none; }
-
-.single-product .social-buttons i {
-  margin-right: 0.3rem; }
-
-.tax-product-type .taxonomy-description {
-  text-align: center; }
-
-/* Sidebar and Widget Area */
-.widget-area {
-  margin-top: 6rem;
-  padding-left: 4rem; }
-  .widget-area .widget.widget_archive ul {
-    padding-left: 0;
-    margin-left: 0; }
-  .widget-area .day-of-week {
-    font-weight: bold; }
-  .widget-area .widget.widget_archive a {
-    color: #248A83; }
-    .widget-area .widget.widget_archive a:hover {
-      color: black; }
-  .widget-area h2.widget-title {
-    font-weight: bold; }
 
 /* Product Archive Page */
 .post-type-archive .site-content, .tax-product-type .site-content {

@@ -23,3 +23,33 @@ h2.widget-title ul {
     padding-left: 0;
     margin-left: 0;
 }
+
+/* Sidebar and Widget Area */
+
+.widget-area {
+    margin-top: 6rem;
+    padding-left: 4rem;
+
+  .widget.widget_archive {
+    ul {
+      padding-left: 0;
+      margin-left: 0;
+    }
+}
+
+  .day-of-week {
+    font-weight: bold;
+  }
+
+  .widget.widget_archive a {
+    color: $color__brand-green;
+
+    &:hover {
+      color: black;
+    }
+  }
+
+  h2.widget-title {
+    font-weight: bold;
+  }
+}

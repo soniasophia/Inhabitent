@@ -39,6 +39,7 @@
 .blog, .single-post, {
 	.hentry {
 		margin: 0 0 4.5rem;
+		margin-bottom: 2rem;
 	}
 
   .entry-header {
@@ -106,6 +107,10 @@
 		color: $color__background-body;
 		border: none;
 	}
+
+		.social-buttons {
+			margin-bottom: 5rem;
+		}
 }
 
 
@@ -122,90 +127,6 @@
 
 	.post-navigation {
 		display: none;
-	}
-
-	.comment {
-		padding-top: $base__space-unit;
-	}
-
-	.comments-link a {
-		color: white;
-
-		&:hover {
-			color: $color__link-hover;
-		}
-	}
-
-	.comments-title, .comment-reply-title {
-		font-weight: bold;
-		font-size: 2rem;
-	}
-	.comment-author-avatar {
-		width: 64px;
-		height: 64px;
-		border-radius: 50%;
-    margin-right: $base__space-unit;
-    overflow: hidden;
-	}
-
-	.comment-author {
-		font-weight: bold;
-	}
-
-	ol.comment-list {
-		padding-left: 0;
-		margin-left: 0;
-	}
-
-	.comment article {
-		padding-bottom: $base__space-unit;
-	}
-
-	.comment-body {
-		display: flex;
-	}
-
-	.comment-metadata {
-		color: $color__brand-grey;
-
-		a {
-			color: $color__brand-green;
-		}
-	}
-
-	.children li {
-    border-top: 1px solid $color__border;
-	}
-
-	.comment-list > li {
-    border-bottom: 1px solid #e1e1e1;
-	}
-
-	.comment-form label {
-		text-transform: uppercase;
-		font-family: $font__headings;
-		font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-	}
-	
-	input[type=submit] {
-		background: $color__brand-green;
-    color: #fff;
-    cursor: pointer;
-    font-family: $font__headings;
-    font-size: 0.9rem;
-    line-height: 1;
-    padding: .75rem 1.5rem;
-    text-decoration: none;
-    text-transform: uppercase;
-		border-color: none;
-		border-radius: 0;
-		box-shadow: none;
-		text-shadow: none;
-
-		&:hover {
-			background: #15544f;
-		}
 	}
 }
 

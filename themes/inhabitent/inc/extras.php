@@ -86,3 +86,17 @@ function inhabitent_archive_title_filter($title)
     return $title;
 }
 add_filter( 'get_the_archive_title', 'inhabitent_archive_title_filter' );
+
+
+function inhabitent_custom_header_upload() {
+	$about_hero_url = CFS()->get( 'hero_image' );
+	if ( ! $about_hero_url ){
+		return;
+	}
+    $about_hero_style = ".page-template-about .entry-header {
+        background: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url({$about_hero_url}) no-repeat center bottom;
+        background-size: cover, cover;
+    }";
+wp_add_inline_style('red-starter-style', $about_hero_style);
+}
+add_action( 'wp_enqueue_scripts', 'inhabitent_custom_header_upload');

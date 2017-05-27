@@ -37,7 +37,7 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 
-				<!-- code for search bar goes here -->
+				<?php get_search_form(); ?>
 				</div>
 			</header><!-- #masthead -->
 
