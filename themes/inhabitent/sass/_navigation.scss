@@ -164,7 +164,7 @@ a {
 
 /* Posts and Pages Navigation */
 
-.blog, .single-post, .page-template-findus, .single-product, .post-type-archive, .tax-product-type {
+.blog, .single-post, .page-template-findus, .single-product, .post-type-archive, .tax-product-type, .search-results, .error404, .search-no-results, .archive {
 	.site-header {
 		background-color: hsla(0,0%,100%,.85);
     z-index: 5;
@@ -188,8 +188,8 @@ a {
 }
 
 /* Search Form */
-
-input.search-field {
+.header-search {
+	input.search-field {
 	display: none;
 	border: 0;
 	margin-left: .75rem;
@@ -198,7 +198,7 @@ input.search-field {
 	font-family: $font__headings;
 	background: transparent;
 	outline: none;
-	color: white;
+	color: #404040;
 
 	&:focus {
 		color: #404040;
@@ -229,6 +229,8 @@ fieldset {
 		border: none;
 	}
 }
+	
+}
 
 .page-template-default, .page-template-about {
 	input.search-field {
@@ -248,3 +250,16 @@ fieldset {
 		}
 	}
 }
+
+
+/* 404 Page Search Form */
+
+	input.search-field {
+		border: 1px solid $color__border;
+	}
+
+	fieldset {
+		border: none;
+		padding: 0;
+		margin: 0;
+	}

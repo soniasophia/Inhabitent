@@ -39,6 +39,8 @@ ul, ol {
 
 ul {
 	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
 }
 
 ol {
@@ -72,4 +74,13 @@ table {
 a {
 	text-decoration: none;
 	list-style: none;
+	color: $color__brand-green;
+
+	&:hover {
+		color: black;
+	}
+}
+
+h2 {
+	color: #2f1339;
 }

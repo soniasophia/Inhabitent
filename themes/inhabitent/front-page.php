@@ -65,7 +65,7 @@ get_header(); ?>
       </section>
       <section class="adventures container">
         <h2>Latest Adventures</h2>
-        <p class="More Adventures"></p>
+        <p class="More Adventures">More Adventures</p>
       </section>
 </div>
 

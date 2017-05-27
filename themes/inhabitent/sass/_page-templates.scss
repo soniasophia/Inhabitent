@@ -413,9 +413,9 @@
   }
 }
 
-/* Find Us Page */
+/* Main Site Content Layout: Find Us Page, Search Results, 404 Page */
 
-.page-template-findus {
+.page-template-findus, .search-results, .error404, .search-no-results, {
     .content-area {
 		border-right: 1px solid $color__border;
     padding-right: 5%;
@@ -474,4 +474,38 @@
     background-color: #f6f6f6;
     border: 1px solid $color__border;
   }
+}
+
+/* Search Results Page */
+
+.search-results {
+  .site-content {
+    margin-bottom: 5rem;
+  }
+  .page-header {
+    border-bottom: 1px solid $color__border;
+  }
+
+  h2 a {
+    color: $color__brand-green;
+  }
+
+  .entry-meta {
+    font-family: $font__headings;
+    text-transform: uppercase;
+  }
+
+  a.read-more {
+		color: #000;
+		border: 1px solid black;
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+		font-family: $font__headings;
+	}
+
+	a.read-more:hover {
+		background: $color__brand-green;
+		color: $color__background-body;
+		border: none;
+	}
 }
