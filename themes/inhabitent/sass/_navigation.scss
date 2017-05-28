@@ -151,9 +151,13 @@ a {
     width: 100%;
 }
 
-.page-template-default, .page-template-about {
+.page-template-default, .page-template-about, .single-adventures {
 	.site-header {
 		position: absolute;
+
+		a {
+			text-shadow: 1px 1px 1px #000;
+		}
 	}
 }
 
@@ -164,7 +168,7 @@ a {
 
 /* Posts and Pages Navigation */
 
-.blog, .single-post, .page-template-findus, .single-product, .post-type-archive, .tax-product-type, .search-results, .error404, .search-no-results, .archive {
+.blog, .single-post, .page-template-findus, .single-product, .post-type-archive, .tax-product-type, .search-results, .error404, .search-no-results, .archive, {
 	.site-header {
 		background-color: hsla(0,0%,100%,.85);
     z-index: 5;
@@ -232,7 +236,7 @@ fieldset {
 	
 }
 
-.page-template-default, .page-template-about {
+.page-template-default, .page-template-about, .single-adventures {
 	input.search-field {
 		&:focus {
 			color: white;
@@ -244,6 +248,7 @@ fieldset {
 
 	.fa.fa-search {
 		color: white;
+		text-shadow: 1px 1px 1px #000;
 		
 		&:hover {
 			color: $color__link-hover;

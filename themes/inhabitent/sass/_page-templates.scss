@@ -331,9 +331,9 @@
 }
 
 
-/* Social Media Buttons on Single Blog Posts and Single Product Pages */
+/* Social Media Buttons on Single Blog Posts, Single Product Pages and Single Adventures Pages */
 
-.single-product, .single-post {
+.single-product, .single-post, .single-adventures {
   .sm-button {
       border: 1px solid black;
       color: black;
@@ -372,7 +372,6 @@
       font-weight: bold;
       font-size: 2.5rem;
       margin-top: 2rem;
-      margin-bottom: 0;
     }
   }
 
@@ -525,3 +524,130 @@
 		border: none;
 	}
 }
+
+/* Adventures Archive Page */
+
+.post-type-archive-adventures {
+  .page-title {
+    margin-bottom: 2.5rem;
+  }
+  .adventure-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 3rem;
+  }
+
+  .adventure-grid-item {
+    flex: 0 1 49%;
+    margin-bottom: 1.5rem;
+    max-width: 49%;
+    position: relative;
+
+    &:before {
+      content: "";
+      float: left;
+      padding-top: 100%;
+    }
+
+  .adventure-image-container {
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &:after {
+      background: rgba(0,0,0,.35);
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  img {
+    left: 50%;
+    max-height: 550px;
+    max-width: none;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+  }
+
+  .adventure-story-info {
+    margin: 1rem 2.5rem;
+    position: absolute;
+    z-index: 2;
+  }
+
+  h2 {
+    font-family: $font__main;
+    text-transform: none;
+    font-size: 3rem;
+
+    a {
+      color: white;
+    }
+  }
+
+  a.read-more {
+    color: white;
+    font-family: novecento;
+    text-transform: uppercase;
+    border: 1px solid white;
+    padding: 0.6rem 1.2rem;
+  }
+}
+}
+
+
+
+
+
+
+
+
+
+//   .adventure-grid-item {
+//     max-width: 49%;
+//     overflow: hidden;
+//     height: 600px;
+//     margin-bottom: 1.5rem;
+//   }
+
+//   img {
+//     position: relative;
+//     max-width: none;
+//     width: auto;
+//     max-height: 600px;
+//     right: 32%;
+//   }
+
+//   .adventure-story-info {
+//     position: absolute;
+//     z-index: 5;
+//   }
+
+//   .entry-title {
+//     font-family: $font__main;
+
+//     a.read-more {
+//       font-family: $font__headings;
+//       color: white;
+//       text-transform: uppercase;
+//     }
+    
+//     a {
+//       // color: white;
+//     }
+//   }
+// }
+
+

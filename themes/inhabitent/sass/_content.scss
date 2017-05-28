@@ -133,6 +133,32 @@
 	}
 }
 
+/* Single Adventures Posts */
+
+.single-adventures {
+	.adventures-container {
+		width: auto;
+	}
+	.adventures-content-container {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.entry-title {
+		font-weight: bold;
+	}
+
+	.author {
+		font-family: $font__headings;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+	}
+}
+
+
+
+
+
 
 /* Asides */
 

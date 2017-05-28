@@ -10,21 +10,21 @@ get_header(); ?>
 
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      <div class="container">
+      <div class="adventures-container">
         <?php while ( have_posts() ) : the_post(); ?>
 
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <div class="product-image-container">
+          <div class="adventures-image-container">
   
           <?php if ( has_post_thumbnail() ) : ?>
-          <?php the_post_thumbnail( 'large' ); ?>
+          <?php the_post_thumbnail( 'full' ); ?>
           <?php endif; ?>
           </div>
 
-        <div class="product-content-container">
+        <div class="adventures-content-container">
           <header class="entry-header">
           <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-          <?php the_author( '<p class="author">', 'By </p>' ) ?>
+          <p class="author">By <?php the_author() ?></p>
           </header><!-- .entry-header -->
 
         <div class="entry-content">

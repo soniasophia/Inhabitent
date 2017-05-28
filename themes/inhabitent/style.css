@@ -629,8 +629,10 @@ a:hover, a:active {
   position: fixed;
   width: 100%; }
 
-.page-template-default .site-header, .page-template-about .site-header {
+.page-template-default .site-header, .page-template-about .site-header, .single-adventures .site-header {
   position: absolute; }
+  .page-template-default .site-header a, .page-template-about .site-header a, .single-adventures .site-header a {
+    text-shadow: 1px 1px 1px #000; }
 
 .site-title {
   display: none; }
@@ -690,21 +692,22 @@ a:hover, a:active {
   .header-search .fa.fa-search:hover {
     border: none; }
 
-.page-template-default input.search-field:focus, .page-template-about input.search-field:focus {
+.page-template-default input.search-field:focus, .page-template-about input.search-field:focus, .single-adventures input.search-field:focus {
   color: white; }
 
-.page-template-default input::-webkit-input-placeholder, .page-template-about input::-webkit-input-placeholder {
+.page-template-default input::-webkit-input-placeholder, .page-template-about input::-webkit-input-placeholder, .single-adventures input::-webkit-input-placeholder {
   color: white; }
 
-.page-template-default input:-ms-input-placeholder, .page-template-about input:-ms-input-placeholder {
+.page-template-default input:-ms-input-placeholder, .page-template-about input:-ms-input-placeholder, .single-adventures input:-ms-input-placeholder {
   color: white; }
 
-.page-template-default input::placeholder, .page-template-about input::placeholder {
+.page-template-default input::placeholder, .page-template-about input::placeholder, .single-adventures input::placeholder {
   color: white; }
 
-.page-template-default .fa.fa-search, .page-template-about .fa.fa-search {
-  color: white; }
-  .page-template-default .fa.fa-search:hover, .page-template-about .fa.fa-search:hover {
+.page-template-default .fa.fa-search, .page-template-about .fa.fa-search, .single-adventures .fa.fa-search {
+  color: white;
+  text-shadow: 1px 1px 1px #000; }
+  .page-template-default .fa.fa-search:hover, .page-template-about .fa.fa-search:hover, .single-adventures .fa.fa-search:hover {
     color: #f0e4d1; }
 
 /* 404 Page Search Form */
@@ -922,6 +925,22 @@ h2.widget-title ul {
 
 .single-post .post-navigation {
   display: none; }
+
+/* Single Adventures Posts */
+.single-adventures .adventures-container {
+  width: auto; }
+
+.single-adventures .adventures-content-container {
+  max-width: 800px;
+  margin: 0 auto; }
+
+.single-adventures .entry-title {
+  font-weight: bold; }
+
+.single-adventures .author {
+  font-family: "novecento", sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase; }
 
 /* Asides */
 .blog .format-aside .entry-title,
@@ -1245,8 +1264,8 @@ object {
 .tax-product-type .taxonomy-description {
   text-align: center; }
 
-/* Social Media Buttons on Single Blog Posts and Single Product Pages */
-.single-product .sm-button, .single-post .sm-button {
+/* Social Media Buttons on Single Blog Posts, Single Product Pages and Single Adventures Pages */
+.single-product .sm-button, .single-post .sm-button, .single-adventures .sm-button {
   border: 1px solid black;
   color: black;
   border-radius: 0;
@@ -1260,7 +1279,7 @@ object {
   font-size: 0.9rem;
   box-shadow: none;
   text-shadow: none; }
-  .single-product .sm-button:hover, .single-post .sm-button:hover {
+  .single-product .sm-button:hover, .single-post .sm-button:hover, .single-adventures .sm-button:hover {
     background: #248A83;
     color: white;
     border: none; }
@@ -1275,8 +1294,7 @@ object {
     text-align: center;
     font-weight: bold;
     font-size: 2.5rem;
-    margin-top: 2rem;
-    margin-bottom: 0; }
+    margin-top: 2rem; }
 
 .post-type-archive .product-type-categories, .tax-product-type .product-type-categories {
   display: -ms-flexbox;
@@ -1400,6 +1418,71 @@ object {
   background: #248A83;
   color: #fff;
   border: none; }
+
+/* Adventures Archive Page */
+.post-type-archive-adventures .page-title {
+  margin-bottom: 2.5rem; }
+
+.post-type-archive-adventures .adventure-grid {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin-top: 3rem; }
+
+.post-type-archive-adventures .adventure-grid-item {
+  -ms-flex: 0 1 49%;
+      flex: 0 1 49%;
+  margin-bottom: 1.5rem;
+  max-width: 49%;
+  position: relative; }
+  .post-type-archive-adventures .adventure-grid-item:before {
+    content: "";
+    float: left;
+    padding-top: 100%; }
+  .post-type-archive-adventures .adventure-grid-item .adventure-image-container {
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0; }
+    .post-type-archive-adventures .adventure-grid-item .adventure-image-container:after {
+      background: rgba(0, 0, 0, 0.35);
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1; }
+  .post-type-archive-adventures .adventure-grid-item img {
+    left: 50%;
+    max-height: 550px;
+    max-width: none;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; }
+  .post-type-archive-adventures .adventure-grid-item .adventure-story-info {
+    margin: 1rem 2.5rem;
+    position: absolute;
+    z-index: 2; }
+  .post-type-archive-adventures .adventure-grid-item h2 {
+    font-family: "merriweather", serif;
+    text-transform: none;
+    font-size: 3rem; }
+    .post-type-archive-adventures .adventure-grid-item h2 a {
+      color: white; }
+  .post-type-archive-adventures .adventure-grid-item a.read-more {
+    color: white;
+    font-family: novecento;
+    text-transform: uppercase;
+    border: 1px solid white;
+    padding: 0.6rem 1.2rem; }
 
 /*--------------------------------------------------------------
 # Footer

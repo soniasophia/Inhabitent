@@ -9,6 +9,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+      <div class="container">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -20,21 +21,30 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+      <div class="adventure-grid">
+			  <?php while ( have_posts() ) : the_post(); ?>
+        <div class="adventure-grid-item">
+          <div class="adventure-image-container">
+            <?php the_post_thumbnail( 'full' ); ?>
+          </div>
+          <div class="adventure-story-info">
+            <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+            <a class="read-more" href="<?php the_permalink(); ?>">Read More</a>
+          </div>
+          </div>
+			      <?php endwhile; ?>
 
-      <?php the_post_thumbnail( 'large' ); ?>
-      <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-      <a href="<?php the_permalink(); ?>"><p class="read-more">Read More</p></a>
-			<?php endwhile; ?>
+			      <?php the_posts_navigation(); ?>
 
-			<?php the_posts_navigation(); ?>
+		        <?php else : ?>
 
-		<?php else : ?>
+			      <?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+		        <?php endif; ?>
+          </div>
+  
 
-		<?php endif; ?>
-
+      </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
