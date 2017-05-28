@@ -83,7 +83,7 @@ get_header(); ?>
               <?php the_post_thumbnail(); ?>
                 <div class="story-info">
                   <h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                  <a href="<?php the_permalink(); ?>"><p class="read-more">Read More</p></a>
+                  <a class="read-more" href="<?php the_permalink(); ?>">Read More</a>
                 </div>
 
               <?php endwhile; ?>
@@ -92,9 +92,11 @@ get_header(); ?>
             </div>
           </li>
         </ul>
-
+        
+        <div class="more-adventures">
         <a href="<?php echo get_post_type_archive_link( 'adventures' ); ?>">More Adventures</a>
-      </section>
+    </div>
+  </section>
 </div>
 
 <?php get_footer(); ?>

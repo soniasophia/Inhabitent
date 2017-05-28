@@ -1157,6 +1157,98 @@ object {
   float: left;
   position: relative;
   overflow: hidden; }
+  .home .adventures li:before {
+    content: "";
+    float: left;
+    padding-top: 540px; }
+  .home .adventures li:first-child {
+    border-right: 20px solid white;
+    width: 50%; }
+  .home .adventures li:nth-child(2) {
+    border-bottom: 20px solid white;
+    width: 50%; }
+    .home .adventures li:nth-child(2):before {
+      padding-top: 250px; }
+  .home .adventures li:nth-child(3) {
+    border-right: 10px solid white;
+    width: 25%; }
+    .home .adventures li:nth-child(3):before {
+      padding-top: 270px; }
+  .home .adventures li:last-child {
+    border-left: 10px solid white;
+    width: 25%; }
+    .home .adventures li:last-child:before {
+      padding-top: 270px; }
+
+.home .adventures .adventure-story-container {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+  z-index: 1; }
+  .home .adventures .adventure-story-container img {
+    left: 50%;
+    max-height: 620px;
+    max-width: none;
+    position: absolute;
+    top: 86%;
+    transform: translate(-50%, -75%);
+    width: auto; }
+  .home .adventures .adventure-story-container:after {
+    background: rgba(0, 0, 0, 0.35);
+    content: "";
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 1; }
+
+.home .adventures .story-info {
+  margin: 1.5rem;
+  position: absolute;
+  z-index: 2; }
+  .home .adventures .story-info .entry-title {
+    font-family: "merriweather", serif;
+    text-transform: none;
+    margin-top: 0; }
+    .home .adventures .story-info .entry-title a {
+      color: white; }
+
+.home .adventures li:first-child .story-info h3 {
+  font-size: 3rem; }
+
+.home .adventures li:nth-child(2) .story-info h3 {
+  font-size: 2.4rem; }
+
+.home .adventures li:nth-child(3) .story-info h3, .home .adventures li:last-child .story-info h3 {
+  font-size: 1.6rem; }
+
+.home .adventures .read-more {
+  margin-top: 0;
+  color: white;
+  font-family: "novecento", sans-serif;
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase; }
+  .home .adventures .read-more:hover {
+    background: #248A83;
+    border: 1px solid #248A83; }
+
+.home .adventures .more-adventures {
+  background: #248A83;
+  padding: 0.75rem 1.5rem; }
+  .home .adventures .more-adventures a {
+    color: white;
+    font-family: "novecento", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2rem; }
+
+ul.adventure-items:after {
+  clear: both;
+  display: table;
+  content: ""; }
 
 /* Footer */
 .site-footer {
@@ -1483,6 +1575,9 @@ object {
     text-transform: uppercase;
     border: 1px solid white;
     padding: 0.6rem 1.2rem; }
+    .post-type-archive-adventures .adventure-grid-item a.read-more:hover {
+      background: #248A83;
+      border: 1px solid #248A83; }
 
 /*--------------------------------------------------------------
 # Footer

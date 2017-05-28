@@ -169,13 +169,156 @@
 
 /* Front Page Adventures Section */
 
-.home .adventures li {
+.home .adventures {
+  li {
     float: left;
     position: relative;
     overflow: hidden;
+
+    &:before {
+      content: "";
+      float: left;
+      padding-top: 540px;
+    }
+
+    &:first-child {
+    border-right: 20px solid white;
+    width: 50%;
+    }
+
+    &:nth-child(2) {
+      border-bottom: 20px solid white;
+      width: 50%;
+
+      &:before {
+        padding-top: 250px;
+      }
+    }
+
+    &:nth-child(3) {
+      border-right: 10px solid white;
+      width: 25%;
+
+      &:before {
+        padding-top: 270px;
+      }
+    }
+
+    &:last-child {
+      border-left: 10px solid white;
+      width: 25%;
+
+      &:before {
+        padding-top: 270px;
+      }
+    }
+  }
+
+  .adventure-story-container {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: 1;
+
+    img {
+      left: 50%;
+      max-height: 620px;
+      max-width: none;
+      position: absolute;
+      top: 86%;
+      transform: translate(-50%,-75%);
+      width: auto;
+    }
+
+    &:after {
+      background: rgba(0,0,0,.35);
+      content: "";
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+
+  .story-info {
+    margin: 1.5rem;
+    position: absolute;
+    z-index: 2;
+
+    .entry-title {
+      font-family: $font__main;
+      text-transform: none;
+      margin-top: 0;
+
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+.home .adventures {
+  li {
+    &:first-child {
+      .story-info h3 {
+        font-size: 3rem;
+      }
+    }
+
+    &:nth-child(2) {
+      .story-info h3 {
+        font-size: 2.4rem;
+      }
+    }
+
+    &:nth-child(3), &:last-child {
+      .story-info h3 {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .read-more {
+    margin-top: 0;
+    color: white;
+    font-family: $font__headings;
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+
+    &:hover {
+      background: $color__brand-green;
+      border: 1px solid $color__brand-green;
+    }
+  }
+
+  .more-adventures {
+    background: $color__brand-green;
+    padding: 0.75rem 1.5rem;
+    
+    a {
+      color: white;
+      font-family: $font__headings;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+ul.adventure-items { 
+  &:after {
+  clear: both;
+  display: table;
+  content: "";
+  }
 }
 
 
+  
 
 
 
@@ -603,51 +746,13 @@
     text-transform: uppercase;
     border: 1px solid white;
     padding: 0.6rem 1.2rem;
+
+    &:hover {
+      background: $color__brand-green;
+      border: 1px solid $color__brand-green;
+    }
   }
 }
 }
-
-
-
-
-
-
-
-
-
-//   .adventure-grid-item {
-//     max-width: 49%;
-//     overflow: hidden;
-//     height: 600px;
-//     margin-bottom: 1.5rem;
-//   }
-
-//   img {
-//     position: relative;
-//     max-width: none;
-//     width: auto;
-//     max-height: 600px;
-//     right: 32%;
-//   }
-
-//   .adventure-story-info {
-//     position: absolute;
-//     z-index: 5;
-//   }
-
-//   .entry-title {
-//     font-family: $font__main;
-
-//     a.read-more {
-//       font-family: $font__headings;
-//       color: white;
-//       text-transform: uppercase;
-//     }
-    
-//     a {
-//       // color: white;
-//     }
-//   }
-// }
 
 
