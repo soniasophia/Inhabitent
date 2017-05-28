@@ -1215,6 +1215,8 @@ object {
     margin-top: 0; }
     .home .adventures .story-info .entry-title a {
       color: white; }
+      .home .adventures .story-info .entry-title a:hover {
+        color: #f0e4d1; }
 
 .home .adventures li:first-child .story-info h3 {
   font-size: 3rem; }
@@ -1238,7 +1240,10 @@ object {
 
 .home .adventures .more-adventures {
   background: #248A83;
-  padding: 0.75rem 1.5rem; }
+  padding: 0.5rem 1.5rem;
+  width: 21%; }
+  .home .adventures .more-adventures:hover {
+    background: #15544f; }
   .home .adventures .more-adventures a {
     color: white;
     font-family: "novecento", sans-serif;
