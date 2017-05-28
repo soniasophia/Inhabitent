@@ -167,6 +167,22 @@
 }
 
 
+/* Front Page Adventures Section */
+
+.home .adventures li {
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
 /* Footer */
 .site-footer {
   background: url(../../images/dark-wood@2x.png);
@@ -349,7 +365,7 @@
   }
 
   .page-header {
-    border-bottom: 1px dashed $color__border;
+    border-bottom: $color_border-dashed;
   
     h1 {
       text-align: center;

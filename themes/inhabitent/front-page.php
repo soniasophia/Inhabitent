@@ -12,7 +12,8 @@ get_header(); ?>
       <section class="product-info container">
         <h2>Shop Stuff</h2>
 
-          <!--Getting the Taxonomy Terms to Display Product Types -->
+          <!--The Query for Getting Taxonomy Terms/Display Product Types-->
+
           <?php $product_types = get_terms(array (
             'taxonomy'=>'product-type',
             'hide_empty'=> 0
@@ -38,7 +39,7 @@ get_header(); ?>
         <div class="container">
           <h2>Inhabitent Journal</h2>
 
-          <!--The Query Loop for Blog Posts-->
+          <!--The Query for Blog Posts-->
 
             <ul><?php
            $posts = new WP_Query( 'posts_per_page=3&order=DES' ); ?>
@@ -63,9 +64,36 @@ get_header(); ?>
             </ul>
         </div>
       </section>
+
       <section class="adventures container">
         <h2>Latest Adventures</h2>
-        <p class="More Adventures">More Adventures</p>
+        <ul class="adventure-items">
+          
+            <?php
+              $adventure_posts = new WP_Query(array (
+              'post_type' => 'adventures',
+              'order' => 'ASC'
+            )); ?>
+
+            <?php if ( $adventure_posts->have_posts() ) : ?>
+            <?php while ( $adventure_posts->have_posts() ) : $adventure_posts->the_post(); ?>
+
+            <li>
+            <div class="adventure-story-container">
+              <?php the_post_thumbnail(); ?>
+                <div class="story-info">
+                  <h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                  <a href="<?php the_permalink(); ?>"><p class="read-more">Read More</p></a>
+                </div>
+
+              <?php endwhile; ?>
+              <?php wp_reset_postdata(); ?>
+              <?php endif; ?>
+            </div>
+          </li>
+        </ul>
+
+        <a href="<?php echo get_post_type_archive_link( 'adventures' ); ?>">More Adventures</a>
       </section>
 </div>
 

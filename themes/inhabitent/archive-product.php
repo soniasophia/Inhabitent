@@ -7,8 +7,6 @@
 
  get_header(); ?>
 
- <!-- REST OF PAGE MARKUP AND PHP HERE -->
-
  	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
       <div class="container">

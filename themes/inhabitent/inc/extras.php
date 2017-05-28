@@ -80,6 +80,8 @@ function inhabitent_archive_title_filter($title)
 {
     if (is_post_type_archive('product')) {
         $title = 'Shop Stuff';
+	} elseif (is_post_type_archive('adventures')) {
+		$title = 'Latest Adventures';
     } elseif (is_tax('product-type')) {
         $title = single_term_title( '', false );
     }
