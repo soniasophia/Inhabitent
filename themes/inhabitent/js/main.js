@@ -10,4 +10,4 @@
       $('.search-field').hide('slow');
     }
     });
-})(jQuery); 
+})(jQuery);
