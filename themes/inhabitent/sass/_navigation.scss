@@ -233,7 +233,6 @@ fieldset {
 		border: none;
 	}
 }
-	
 }
 
 .page-template-default, .page-template-about, .single-adventures {
@@ -254,6 +253,29 @@ fieldset {
 			color: $color__link-hover;
 		}
 	}
+}
+
+.green-navigation {
+	.site-header {
+		background-color: hsla(0,0%,100%,.85);
+    z-index: 5;
+		border-bottom: 1px solid $color__border;
+
+	.main-navigation a {
+		color: $color__brand-green;
+
+		&:hover {
+			color: #404040;
+		}
+	}
+
+	.site-logo {
+		background: url(../../images/inhabitent-logo-tent.svg) no-repeat;
+		background-size: 100%;
+		height: 33px;
+		width: 50px;
+	}
+}
 }
 
 

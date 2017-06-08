@@ -69,13 +69,6 @@ function inhabitent_modify_archive_query( $query ) {
 add_action( 'pre_get_posts', 'inhabitent_modify_archive_query' );
 
 // Filter Archive Titles
-// function get_the_archive_title( $title ) {
-// 	if ( is_post_type_archive( 'product' ) || $title->is_tax( 'product-type' )) {
-//         $title = sprintf( __( 'Archives: %s' ), post_type_archive_title( '', false ) );
-// 	}
-// return apply_filters( 'get_the_archive_title', $title );
-// }
-
 function inhabitent_archive_title_filter($title)
 {
     if (is_post_type_archive('product')) {
@@ -89,16 +82,26 @@ function inhabitent_archive_title_filter($title)
 }
 add_filter( 'get_the_archive_title', 'inhabitent_archive_title_filter' );
 
-
+// Custom Header Upload for About Page
 function inhabitent_custom_header_upload() {
+	wp_enqueue_style(
+		'custom-style',
+	get_template_directory_uri() . '/about.php'
+	);
+
 	$about_hero_url = CFS()->get( 'hero_image' );
-	if ( ! $about_hero_url ){
-		return;
-	}
-    $about_hero_style = ".page-template-about .entry-header {
+	if ( ! $about_hero_url ) {
+		$about_hero_style = ".page-template-about .entry-header {
+			background-color: grey;
+			height: 100vh;
+		}";
+	} else {
+		$about_hero_style = ".page-template-about .entry-header {
         background: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url({$about_hero_url}) no-repeat center bottom;
         background-size: cover, cover;
-    }";
-wp_add_inline_style('red-starter-style', $about_hero_style);
+		height: 100vh;
+    	}";
+	}
+wp_add_inline_style('custom-style', $about_hero_style);
 }
 add_action( 'wp_enqueue_scripts', 'inhabitent_custom_header_upload');

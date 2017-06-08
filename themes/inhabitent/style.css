@@ -710,6 +710,20 @@ a:hover, a:active {
   .page-template-default .fa.fa-search:hover, .page-template-about .fa.fa-search:hover, .single-adventures .fa.fa-search:hover {
     color: #f0e4d1; }
 
+.green-navigation .site-header {
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 5;
+  border-bottom: 1px solid #e1e1e1; }
+  .green-navigation .site-header .main-navigation a {
+    color: #248A83; }
+    .green-navigation .site-header .main-navigation a:hover {
+      color: #404040; }
+  .green-navigation .site-header .site-logo {
+    background: url(../../images/inhabitent-logo-tent.svg) no-repeat;
+    background-size: 100%;
+    height: 33px;
+    width: 50px; }
+
 /* 404 Page Search Form */
 input.search-field {
   border: 1px solid #e1e1e1; }
@@ -1298,8 +1312,6 @@ ul.adventure-items:after {
 
 /* About Page */
 .page-template-about .entry-header {
-  background-size: cover, cover;
-  height: 100vh;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
