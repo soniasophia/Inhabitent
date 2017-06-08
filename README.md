@@ -1,6 +1,7 @@
 # Project 5: Inhabitent
 
 ![Inhabitent](https://preview.ibb.co/fB4ETF/inhabitent_screenshot.png)
+
 Inhabitent Camping Supply Co. website (Desktop)
 
 ## Project Objective
