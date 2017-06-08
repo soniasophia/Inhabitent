@@ -1,14 +1,14 @@
 // Search form
 (function ($) {
   $('.icon-search').on('click', function() {
-    $('.search-field').toggle('fast');
+    $('.search-field').toggle('slow');
     $('.search-field').focus();
     return false;
   });
 
   $(document).on('click', function(e) {
     if(! $('.search-field').is(e.target) ) {
-      $('.search-field').hide('fast');
+      $('.search-field').hide('slow');
     }
   });
 })(jQuery);

@@ -9,11 +9,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php if ( has_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail( 'large' ); ?>
-		<?php endif; ?>
-
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php 
+		if ( has_post_thumbnail() ) {
+			 the_post_thumbnail( 'large' ); 
+			 the_title( '<h1 class="entry-title">', '</h1>' );
+		} else {
+			the_title( '<h1 class="entry-title-empty">', '</h1>' );
+		}
+		?>
 
 		<div class="entry-meta">
 			<?php red_starter_posted_on(); ?> / <?php red_starter_comment_count(); ?> / <?php red_starter_posted_by(); ?>
