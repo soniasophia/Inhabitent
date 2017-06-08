@@ -1,6 +1,6 @@
 # Project 5: Inhabitent
 
-![Inhabitent](https://github.com/soniasophia/inhabitent/blob/master/inhabitent_screenshot.png)
+![Inhabitent](https://preview.ibb.co/fB4ETF/inhabitent_screenshot.png)
 Inhabitent Camping Supply Co. website (Desktop)
 
 ## Project Objective
