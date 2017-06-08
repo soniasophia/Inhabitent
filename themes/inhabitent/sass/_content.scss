@@ -135,7 +135,7 @@
 
 /* When a post doesn't contain a featured image */
 
-h1.entry-title-empty {
+h1.entry-title-empty, h2.entry-title-empty {
 		line-height: 1.3;
 		top: 0px;
 		background: $color__brand-green;
@@ -146,6 +146,10 @@ h1.entry-title-empty {
 		max-width: 100%;
 		color: $color__background-body;
 		margin-bottom: 0;
+	}
+
+	h2.entry-title-empty a {
+		color: white;
 	}
 
 /* Single Adventures Posts */
