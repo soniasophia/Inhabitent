@@ -25,3 +25,13 @@ Inhabitent Camping Supply Co. website (Desktop)
 - Learned about the main loop and queries that WordPress uses to retrieve and display posts and how to add to and/or modify them.
 - Learned about the various WordPress template tags and hooks (actions and filters).
 - Learned how to build a static front page (home page) and retrieve different post types to be displayed dynamically.
+
+## Installation
+
+### Install the dev dependencies
+
+Next you'll need to run `npm install` **inside your theme directory** next to install the node modules you'll need for Gulp, etc.
+
+### Update the proxy in `gulpfile.js`
+
+Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Browsersync proxy (so change `inhabitent.dev` to the appropriate localhost URL).
