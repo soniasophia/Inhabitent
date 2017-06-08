@@ -1,18 +1,17 @@
 // Search form
 (function ($) {
-    $('.icon-search').on('click', function(event) {
-      event.preventDefault();
-      event.stopPropagation();
-      $('.search-field').toggle('slow');
-    });
-    
-    $(document).on('click', function(event) {
-    if(! $('.search-field').is(event.target) ) {
-      $('.search-field').hide('slow');
-    }
-    });
-})(jQuery);
+  $('.icon-search').on('click', function() {
+    $('.search-field').toggle('fast');
+    $('.search-field').focus();
+    return false;
+  });
 
+  $(document).on('click', function(e) {
+    if(! $('.search-field').is(e.target) ) {
+      $('.search-field').hide('fast');
+    }
+  });
+})(jQuery);
 
 // Fixed navigation with inverted brand colors
 // (function ($) {
