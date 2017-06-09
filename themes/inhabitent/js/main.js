@@ -28,16 +28,16 @@
   })
 })(jQuery);
 
-// (function ($) {
-//   $(window).scroll(function() {
-//     let winH = $('.adventures-image-container img').height();
+(function ($) {
+  $(window).scroll(function() {
+    var winH = $('.adventures-image-container img').height();
 
-//   if ($(window).scrollTop() > winH) {
-//     $('.single-adventures').addClass('green-navigation');
-//     $('.single-adventures').removeClass('site-header');
-//   } else if ($(window).scrollTop() < winH) {
-//     $('.single-adventures').removeClass('green-navigation');
-//     $('.single-adventures').addClass('site-header');
-//   }
-//   })
-// })(jQuery);
+  if ($(window).scrollTop() > winH) {
+    $('.single-adventures header').addClass('green-navigation');
+    $('.single-adventures header').removeClass('site-header');
+  } else if ($(window).scrollTop() < winH) {
+    $('.single-adventures header').removeClass('green-navigation');
+    $('.single-adventures header').addClass('site-header');
+  }
+  })
+})(jQuery);

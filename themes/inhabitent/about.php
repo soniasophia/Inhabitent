@@ -8,7 +8,6 @@ get_header(); ?>
         
        <?php
         while ( have_posts() ) : the_post();
-            // get_template_part( 'template-parts/content', 'page' );
         endwhile;
         ?>
         <div class="about-info container"><h2>Our Story</h2><p><?php echo CFS()->get( 'our_story' ); ?></p></div>
