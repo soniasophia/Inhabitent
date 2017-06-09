@@ -710,19 +710,37 @@ a:hover, a:active {
   .page-template-default .fa.fa-search:hover, .page-template-about .fa.fa-search:hover, .single-adventures .fa.fa-search:hover {
     color: #f0e4d1; }
 
-.green-navigation .site-header {
+/* Inverted green site navigation */
+.green-navigation {
   background-color: rgba(255, 255, 255, 0.85);
   z-index: 5;
-  border-bottom: 1px solid #e1e1e1; }
-  .green-navigation .site-header .main-navigation a {
+  border-bottom: 1px solid #e1e1e1;
+  position: fixed;
+  width: 100%;
+  padding: 0.5rem 0; }
+  .green-navigation .container {
+    display: -ms-flexbox;
+    display: flex; }
+  .green-navigation .main-navigation a {
     color: #248A83; }
-    .green-navigation .site-header .main-navigation a:hover {
+    .green-navigation .main-navigation a:hover {
       color: #404040; }
-  .green-navigation .site-header .site-logo {
+  .green-navigation .site-logo {
     background: url(../../images/inhabitent-logo-tent.svg) no-repeat;
     background-size: 100%;
     height: 33px;
     width: 50px; }
+  .green-navigation .search-form .fa.fa-search {
+    color: #248A83;
+    text-shadow: none; }
+  .green-navigation .search-form input::-webkit-input-placeholder {
+    color: #404040; }
+  .green-navigation .search-form input:-ms-input-placeholder {
+    color: #404040; }
+  .green-navigation .search-form input::placeholder {
+    color: #404040; }
+  .green-navigation .search-form input.search-field {
+    color: #404040; }
 
 /* 404 Page Search Form */
 input.search-field {
@@ -1340,7 +1358,10 @@ ul.adventure-items:after {
   text-align: center;
   color: #fff;
   margin: 0 auto;
-  font-weight: bold; }
+  font-weight: bold;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center; }
 
 .page-template-about .content-area {
   margin-bottom: 5rem; }

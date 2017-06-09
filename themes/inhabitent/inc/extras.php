@@ -91,15 +91,16 @@ function inhabitent_custom_header_upload() {
 
 	$about_hero_url = CFS()->get( 'hero_image' );
 	if ( ! $about_hero_url ) {
-		$about_hero_style = ".page-template-about .entry-header {
+		$about_hero_style = ".about-header {
 			background-color: grey;
 			height: 100vh;
 		}";
 	} else {
-		$about_hero_style = ".page-template-about .entry-header {
+		$about_hero_style = ".about-header {
         background: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url({$about_hero_url}) no-repeat center bottom;
         background-size: cover, cover;
 		height: 100vh;
+		display: flex;
     	}";
 	}
 wp_add_inline_style('custom-style', $about_hero_style);

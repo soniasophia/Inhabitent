@@ -255,11 +255,18 @@ fieldset {
 	}
 }
 
+/* Inverted green site navigation */
 .green-navigation {
-	.site-header {
 		background-color: hsla(0,0%,100%,.85);
     z-index: 5;
 		border-bottom: 1px solid $color__border;
+		position: fixed;
+		width: 100%;
+		padding: 0.5rem 0;
+
+		.container {
+			display: flex;
+		}
 
 	.main-navigation a {
 		color: $color__brand-green;
@@ -275,7 +282,21 @@ fieldset {
 		height: 33px;
 		width: 50px;
 	}
-}
+
+	.search-form {
+		.fa.fa-search {
+			color: $color__brand-green;
+			text-shadow: none;
+		}
+
+		input::placeholder {
+			color: #404040;
+		}
+
+		input.search-field {
+			color: #404040;
+		}
+	}
 }
 
 
