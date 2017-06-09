@@ -23,8 +23,8 @@ get_header(); ?>
 
         <div class="adventures-content-container">
           <div class="entry-header">
-          <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-          <p class="author">By <?php the_author() ?></p>
+            <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+            <p class="author">By <?php the_author() ?></p>
           </div><!-- .entry-header -->
 
         <div class="entry-content">
